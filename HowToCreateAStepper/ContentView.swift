@@ -9,8 +9,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var numberOfSteps: Int = 0
     var body: some View {
-        Text("Hello World")
+        Stepper(value: $numberOfSteps, in: 0...1000, label: {
+            Text("NUmbers of steps: \(numberOfSteps)")
+            }).padding()
     }
 }
 
